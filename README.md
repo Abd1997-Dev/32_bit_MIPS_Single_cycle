@@ -31,7 +31,7 @@ The above instruction is expanded as follows
 ```
 0010 0000 0010 0010 0000 0000 0000 0100
 ```
-The following table represents the decoding of the I-Type instructions, (The values from the above instructions are also inserted into this table for understanding)
+The following table represents the decoding of the I-Type ADD instructions, (The values from the above instructions are also inserted into this table for understanding)
 
 | bits | 31:26 | 25:21 | 20:16 | 15:0 |
 | ------------- | ------------- |  ------------- |  ------------- |  ------------- |
@@ -43,5 +43,49 @@ from the above table, the decoded instruction is,
 ```
 (rt) <- (rs) + Imm
 (r2) <- (r1) + 4
+```
+
+3. The LW instruction loads the data present in the memory location represented by addding the data in the source register (rs) and Sign Extended Immediate (Imm) into the register represented by rt. The corresponding example instruction is used to execute the Immediate type Load Word operation.
+```
+8C010001
+```
+The above instruction is expanded as follows
+```
+1000 1100 0000 0001 0000 0000 0000 0001
+```
+The following table represents the decoding of the I-Type Load Word instructions, (The values from the above instructions are also inserted into this table for understanding)
+
+| bits | 31:26 | 25:21 | 20:16 | 15:0 |
+| ------------- | ------------- |  ------------- |  ------------- |  ------------- |
+| example | 100011 | 00000 | 00001 | 0000_0000_0000_0001 |
+| name | op | rs | rt | Imm |
+| number of bits  | 6 | 5 | 5 | 16 |
+
+from the above table, the decoded instruction is,
+```
+(rt) <- mem[(rs) + Imm]
+(r1) <- mem[(r0) + 1]
+```
+
+4. The SW instruction stores the data present in the register represented by rt into the memory location represented by addding the data in the source register (rs) and Sign Extended Immediate (Imm) . The corresponding example instruction is used to execute the Immediate type Store Word operation.
+```
+AC010001
+```
+The above instruction is expanded as follows
+```
+1010 1100 0000 0001 0000 0000 0000 0001
+```
+The following table represents the decoding of the I-Type Load Word instructions, (The values from the above instructions are also inserted into this table for understanding)
+
+| bits | 31:26 | 25:21 | 20:16 | 15:0 |
+| ------------- | ------------- |  ------------- |  ------------- |  ------------- |
+| example | 101011 | 00000 | 00001 | 0000_0000_0000_0001 |
+| name | op | rs | rt | Imm |
+| number of bits  | 6 | 5 | 5 | 16 |
+
+from the above table, the decoded instruction is,
+```
+mem[(rs) + Imm] <- (rt)
+mem[(r0) + 1] <- (r1)
 ```
 
