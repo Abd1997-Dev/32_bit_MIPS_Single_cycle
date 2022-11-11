@@ -144,3 +144,6 @@ As discussed, the hardware is designed to execute all the above four instruction
 1. The instructions are working well, but there are some hazards at the starting of the next instruction.
 2. The timings should be well utilized.
 3. The concept of Pipelining should be incurred to better use the hardware.
+
+#Reference
+1. John L. Hennessy and David A. Patterson, "Computer Architecture: A Quantitative Approach", Morgan Kaufmann Publishers, ISBN 978-0-12-383872-8.
