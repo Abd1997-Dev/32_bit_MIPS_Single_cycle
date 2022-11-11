@@ -89,3 +89,58 @@ mem[(rs) + Imm] <- (rt)
 mem[(r0) + 1] <- (r1)
 ```
 
+The hardware design present in the theory to execute the above four instructions is as follows,
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73669849/201391642-509b9af4-e301-4bad-8ee0-006c9b908b0f.png" width="600" height="300">
+</p>
+<p align = "center">
+Fig. 1 - Hardware Design of MIPS Architecture
+</p>
+
+
+The Schematic obtained from our RTL design is as follows,
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73669849/201392836-87bf0cf2-ff1d-4936-8da9-9bcf7220edb8.png" width="1000" height="400">
+</p>
+<p align = "center">
+Fig. 2 - Schematic of MIPS Architecture
+</p>
+
+The RTL Design is simulated for 600 ns and each 200 ns output waveform is displayed here,<br>
+<br>
+**0 ns to 200 ns,**
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73669849/201394199-257c4738-ccf1-4be4-a8f5-cd63c30a0e72.png" width="900" height="500">
+</p>
+<p align = "center">
+Fig. 3 - Simulation output from 0 ns to 200 ns
+</p>
+
+from **200 ns to 400 ns,**
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73669849/201394956-8066d8a6-2f96-42a1-978c-2a14148b2a1f.png" width="900" height="500">
+</p>
+<p align = "center">
+Fig. 4 - Simulation output from 200 ns to 400 ns
+</p>
+
+from **400 ns to 600 ns,**
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73669849/201395841-fa3884b6-b530-4588-99eb-ab11663d4cd8.png" width="900" height="500">
+</p>
+<p align = "center">
+Fig. 5 - Simulation output from 400 ns to 600 ns
+</p>
+
+# Conclusion
+As discussed, the hardware is designed to execute all the above four instructions. The hardware based on the theory is referred to design this RTL Design and the schematic of the design also presented in the above document. The three simulation instances are captured and presented above.
+
+# Further Works
+1. The instructions are working well, but there are some hazards at the starting of the next instruction.
+2. The timings should be well utilized.
+3. The concept of Pipelining should be incurred to better use the hardware.
