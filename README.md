@@ -1,4 +1,5 @@
 # 32 bit MIPS Single cycle
+<p align="justify"> &emsp;
 The RTL Design of 32 bit Microprocessor without Interlocked Pipeline Stages (MIPS) architecture for a single cycle operation is discussed in this repository. Here, four instructions like ADD, ADDI, LW, and SW are executed using the hardware design for simple and clear understanding.
 
 1. The ADD instruction adds the data present in the two registers Source (rs) and Temporary (rt). It stores the result in the Destination register (rd). The corresponding example instruction is used to execute the Register Type Addtion operation
@@ -147,3 +148,5 @@ As discussed, the hardware is designed to execute all the above four instruction
 
 # Reference
 1. John L. Hennessy and David A. Patterson, "Computer Architecture: A Quantitative Approach", Morgan Kaufmann Publishers, ISBN 978-0-12-383872-8.
+
+</p>
